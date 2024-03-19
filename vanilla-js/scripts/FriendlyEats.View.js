@@ -519,7 +519,11 @@ FriendlyEats.prototype.rerender = function() {
 };
 
 FriendlyEats.prototype.initAppCheck = function() {
-  /*
-    TODO: Initialize and activate App Check
-  */
+    var appCheck = firebase.appCheck();
+    appCheck.activate(
+    new firebase.appCheck.ReCaptchaEnterpriseProvider(
+      /* reCAPTCHA Enterprise site key */
+    ),
+    true // Set to true to allow auto-refresh.
+  );
 };

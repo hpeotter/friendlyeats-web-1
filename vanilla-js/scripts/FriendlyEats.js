@@ -28,11 +28,9 @@ function FriendlyEats() {
         /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
 );
-  if(isLocalhost) {
-    /*
-      TODO: Set up local debug token
-    */
-  }
+if(isLocalhost) {
+  self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+}
 
   this.filters = {
     city: '',
